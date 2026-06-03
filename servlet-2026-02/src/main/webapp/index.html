@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main class="login-card">
+    <h1>Bienvenido</h1>
+    <p>Ingresa tus credenciales para iniciar sesion.</p>
+
+    <form action="login" method="post">
+        <div class="field">
+            <label for="email">Correo electronico</label>
+            <input id="email" type="email" name="email" placeholder="usuario@uth.hn" required>
+        </div>
+
+        <div class="field">
+            <label for="clave">Contrasena</label>
+            <input id="clave" type="password" name="clave" placeholder="********" required>
+        </div>
+
+        <div class="actions">
+            <input type="submit" value="Ingresar">
+        </div>
+    </form>
+</main>
+</body>
+</html>

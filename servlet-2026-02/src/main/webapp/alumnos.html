@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de alumnos</title>
+    <link rel="stylesheet" href="{{CSS_PATH}}">
+</head>
+<body>
+<main class="student-card">
+    <h1>Registro de alumnos</h1>
+    <p>Completa la informacion del estudiante para la clase universitaria.</p>
+
+    <div class="{{MESSAGE_CLASS}}">{{MESSAGE_TEXT}}</div>
+
+    <form action="{{ACTION_PATH}}" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" value="{{NOMBRE}}" required>
+
+        <label for="cuenta">Numero de cuenta</label>
+        <input id="cuenta" name="cuenta" type="text" value="{{CUENTA}}" required>
+
+        <label for="correo">Correo institucional</label>
+        <input id="correo" name="correo" type="email" value="{{CORREO}}" required>
+
+        <label for="carrera">Carrera</label>
+        <input id="carrera" name="carrera" type="text" value="{{CARRERA}}" required>
+
+        <label for="clase">Clase</label>
+        <input id="clase" name="clase" type="text" value="{{CLASE}}" required>
+
+        <label for="seccion">Seccion</label>
+        <input id="seccion" name="seccion" type="text" value="{{SECCION}}" required>
+
+        <div class="actions">
+            <button type="submit">Registrar alumno</button>
+            <!--<a class="secondary" href="{{LOGIN_PATH}}">Cerrar Sesión</a>-->
+
+        </div>
+    </form>
+    <form action="login" method="get">
+        <div class="actions">
+            <button class="secondary" type="submit">Cerrar sesión</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>
+
