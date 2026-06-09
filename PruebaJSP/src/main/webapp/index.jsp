@@ -2,11 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>Prueba JSP</title>
 </head>
-<body>
-<h1><%= "Hello World!" %></h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
-</body>
+  <body>
+    <h2>Su dirección IP es: <%= request.getRemoteAddr() %></h2>
+    <br/>
+    <h3>Su Host es: <%= request.getRemoteHost() %></h3>
+
+    <form action="dashboard.jsp" method="post">
+      <label for="nombre">Nombre: </label>
+      <input id="nombre" name="nombre" type="text" placeholder="Nombre" />
+      <input type="submit" value="Ingresar" />
+    </form>
+  </body>
 </html>
