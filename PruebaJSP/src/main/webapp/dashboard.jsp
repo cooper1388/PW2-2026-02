@@ -11,15 +11,15 @@
     <title>Dahboard</title>
 </head>
 <body>
+<%! String nombre = ""; %>
+
 <%
-    String nombre = request.getParameter("nombre");
+    nombre = request.getParameter("nombre");
     if (nombre != null && !nombre.isEmpty()) {
+        response.getWriter().print("<p> Hola " + nombre+"!</p>");
+     }else {
+        response.getWriter().print("<h3>Tiene que ingresar si nombre!</h3>");
+    }
 %>
-        <p> Hola <%= nombre %>! </p>
-<% }else {
-        %>
-    <h3>Tiene que ingresar si nombre!</h3>
-<%
-} %>
 </body>
 </html>
