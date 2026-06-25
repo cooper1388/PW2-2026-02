@@ -1,0 +1,54 @@
+:root {
+    --wc26-green: #00a651;
+    --wc26-red: #e63946;
+    --wc26-blue: #1d4ed8;
+    --wc26-gold: #f4c542;
+    --wc26-dark: #0f172a;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.wc26-header {
+    background: linear-gradient(120deg, var(--wc26-blue), var(--wc26-red));
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.wc26-accent {
+    border-left: 5px solid var(--wc26-green);
+}
+
+.wc26-btn {
+    background: linear-gradient(120deg, var(--wc26-green), #16a34a);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.wc26-btn:hover {
+    filter: brightness(0.95);
+    color: #fff;
+}
+
+.wc26-title {
+    color: var(--wc26-dark);
+    font-weight: 700;
+}
+
+.wc26-subtitle {
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.wc26-table thead {
+    background-color: var(--wc26-dark);
+    color: #fff;
+}
+
+.wc26-highlight {
+    color: var(--wc26-gold);
+    font-weight: 700;
+}
+
