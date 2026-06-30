@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html">
+<f:view>
+    <f:metadata>
+        <f:event type="preRenderView" listener="#{LoginBean.validarSesion}"/>
+    </f:metadata>
+
+    <h:head>
+        <title>Tabla de Posiciones</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/styles.css"/>
+    </h:head>
+    <h:body>
+        <div class="container py-4 py-md-5">
+            <div class="p-4 p-md-5 mb-4 shadow-sm wc26-header">
+                <h1 class="h3 mb-2">Tabla de Posiciones <span class="wc26-highlight">Quiniela 2026</span></h1>
+                <p class="mb-0">Puntaje calculado automáticamente a partir de pronósticos y resultados reales.</p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a href="index.xhtml" class="btn wc26-btn">Ir a Pronosticos</a>
+                    <a href="resultados.xhtml" class="btn wc26-btn">Ir a Resultados</a>
+                </div>
+                <h:form prependId="false" styleClass="mt-3 d-flex flex-wrap gap-2 align-items-center">
+                    <h:panelGroup styleClass="badge text-bg-light">
+                        <h:outputText value="Usuario: #{LoginBean.correo}"/>
+                    </h:panelGroup>
+                    <h:commandButton value="Cerrar Sesión" action="#{LoginBean.cerrarSesion}" styleClass="btn btn-outline-light btn-sm"/>
+                </h:form>
+            </div>
+
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <h2 class="h5 wc26-title mb-1">Ranking de usuarios</h2>
+                    <p class="wc26-subtitle mb-4">
+                        Reglas: resultado exacto = 6 pts, ganador correcto = 3 pts, acierto de goles de un equipo = +1 pt.
+                    </p>
+
+                    <h:panelGroup rendered="#{empty TablaPosicionesBean.posiciones}" styleClass="alert alert-info mb-0 d-block">
+                        Aun no hay partidos evaluables con pronostico y resultado real.
+                    </h:panelGroup>
+
+                    <h:panelGroup rendered="#{not empty TablaPosicionesBean.posiciones}" layout="block" styleClass="table-responsive">
+                        <h:dataTable value="#{TablaPosicionesBean.posiciones}" var="pos"
+                                     styleClass="table table-striped table-hover align-middle wc26-table">
+                            <h:column>
+                                <f:facet name="header">Posición</f:facet>
+                                <h:outputText value="#{pos.posicion}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Usuario</f:facet>
+                                <h:outputText value="#{pos.usuario}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Puntos</f:facet>
+                                <h:outputText value="#{pos.puntos}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Exactos</f:facet>
+                                <h:outputText value="#{pos.aciertosExactos}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Ganador</f:facet>
+                                <h:outputText value="#{pos.aciertosGanador}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">+1 Gol equipo</f:facet>
+                                <h:outputText value="#{pos.aciertosGolesEquipo}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Partidos evaluados</f:facet>
+                                <h:outputText value="#{pos.partidosEvaluados}"/>
+                            </h:column>
+                        </h:dataTable>
+                    </h:panelGroup>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</f:view>
+</html>
+

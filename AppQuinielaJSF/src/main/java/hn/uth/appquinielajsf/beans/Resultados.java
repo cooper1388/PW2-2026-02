@@ -2,21 +2,24 @@ package hn.uth.appquinielajsf.beans;
 
 import hn.uth.appquinielajsf.data.Partido;
 import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.context.FacesContext;
+import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Named("ResultadosBean")
 @SessionScoped
 public class Resultados implements Serializable {
+    @Inject
+    private QuinielaStore quinielaStoreBean;
+
     private Partido partidoSeleccionado;
-    private List<Partido> resultados;
 
     public Resultados() {
         limpiarCampos();
-        this.resultados = new ArrayList<>();
     }
 
     public Partido getPartidoSeleccionado() {
@@ -28,15 +31,13 @@ public class Resultados implements Serializable {
     }
 
     public void registrarMarcador() {
-        for (int i = 0; i < this.resultados.size(); i++) {
-            if (this.resultados.get(i).getRival1().equals(this.partidoSeleccionado.getRival1()) &&
-                    this.resultados.get(i).getRival2().equals(this.partidoSeleccionado.getRival2())) {
-                this.resultados.set(i, this.partidoSeleccionado);
-                limpiarCampos();
-                return;
-            }
+        if (this.partidoSeleccionado == null) {
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_ERROR, "Seleccione un partido para registrar el resultado.", null));
+            return;
         }
-        this.resultados.add(this.partidoSeleccionado);
+
+        quinielaStoreBean.registrarResultado(this.partidoSeleccionado);
         limpiarCampos();
     }
 
@@ -46,10 +47,10 @@ public class Resultados implements Serializable {
     }
 
     public List<Partido> getResultados() {
-        return resultados;
+        return quinielaStoreBean.getResultados();
     }
 
     public void setResultados(List<Partido> resultados) {
-        this.resultados = resultados;
+        quinielaStoreBean.reemplazarResultados(resultados);
     }
 }

@@ -96,34 +96,34 @@ public class Partidos implements Serializable {
         partidos.add(new Partido("Congo DR", "Uzbekistan", crearFechaHonduras(2026, 6, 27, 17, 30), 0, 0));
         partidos.add(new Partido("Algeria", "Austria", crearFechaHonduras(2026, 6, 27, 20, 0), 0, 0));
         partidos.add(new Partido("Jordan", "Argentina", crearFechaHonduras(2026, 6, 27, 20, 0), 0, 0));
-//        partidos.add(new Partido("Group A 2nd Place", "Group B 2nd Place", crearFechaHonduras(2026, 6, 28, 13, 0), 0, 0));
-//        partidos.add(new Partido("Group C Winner", "Group F 2nd Place", crearFechaHonduras(2026, 6, 29, 11, 0), 0, 0));
-//        partidos.add(new Partido("Germany", "Third Place Group A/B/C/D/F", crearFechaHonduras(2026, 6, 29, 14, 30), 0, 0));
-//        partidos.add(new Partido("Group F Winner", "Group C 2nd Place", crearFechaHonduras(2026, 6, 29, 19, 0), 0, 0));
-//        partidos.add(new Partido("Group E 2nd Place", "Group I 2nd Place", crearFechaHonduras(2026, 6, 30, 11, 0), 0, 0));
-//        partidos.add(new Partido("Group I Winner", "Third Place Group C/D/F/G/H", crearFechaHonduras(2026, 6, 30, 15, 0), 0, 0));
-//        partidos.add(new Partido("Mexico", "Third Place Group C/E/F/H/I", crearFechaHonduras(2026, 6, 30, 19, 0), 0, 0));
-//        partidos.add(new Partido("Group L Winner", "Third Place Group E/H/I/J/K", crearFechaHonduras(2026, 7, 1, 10, 0), 0, 0));
-//        partidos.add(new Partido("Group G Winner", "Third Place Group A/E/H/I/J", crearFechaHonduras(2026, 7, 1, 14, 0), 0, 0));
-//        partidos.add(new Partido("United States", "Third Place Group B/E/F/I/J", crearFechaHonduras(2026, 7, 1, 18, 0), 0, 0));
-//        partidos.add(new Partido("Group H Winner", "Group J 2nd Place", crearFechaHonduras(2026, 7, 2, 13, 0), 0, 0));
-//        partidos.add(new Partido("Group K 2nd Place", "Group L 2nd Place", crearFechaHonduras(2026, 7, 2, 17, 0), 0, 0));
-//        partidos.add(new Partido("Group B Winner", "Third Place Group E/F/G/I/J", crearFechaHonduras(2026, 7, 2, 21, 0), 0, 0));
-//        partidos.add(new Partido("Group D 2nd Place", "Group G 2nd Place", crearFechaHonduras(2026, 7, 3, 12, 0), 0, 0));
-//        partidos.add(new Partido("Group J Winner", "Group H 2nd Place", crearFechaHonduras(2026, 7, 3, 16, 0), 0, 0));
-//        partidos.add(new Partido("Group K Winner", "Third Place Group D/E/I/J/L", crearFechaHonduras(2026, 7, 3, 19, 30), 0, 0));
-//        partidos.add(new Partido("Round of 32 1 Winner", "Round of 32 3 Winner", crearFechaHonduras(2026, 7, 4, 11, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 2 Winner", "Round of 32 5 Winner", crearFechaHonduras(2026, 7, 4, 15, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 4 Winner", "Round of 32 6 Winner", crearFechaHonduras(2026, 7, 5, 14, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 7 Winner", "Round of 32 8 Winner", crearFechaHonduras(2026, 7, 5, 18, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 11 Winner", "Round of 32 12 Winner", crearFechaHonduras(2026, 7, 6, 13, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 9 Winner", "Round of 32 10 Winner", crearFechaHonduras(2026, 7, 6, 18, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 14 Winner", "Round of 32 16 Winner", crearFechaHonduras(2026, 7, 7, 10, 0), 0, 0));
-//        partidos.add(new Partido("Round of 32 13 Winner", "Round of 32 15 Winner", crearFechaHonduras(2026, 7, 7, 14, 0), 0, 0));
-//        partidos.add(new Partido("Round of 16 1 Winner", "Round of 16 2 Winner", crearFechaHonduras(2026, 7, 9, 14, 0), 0, 0));
-//        partidos.add(new Partido("Round of 16 5 Winner", "Round of 16 6 Winner", crearFechaHonduras(2026, 7, 10, 13, 0), 0, 0));
-//        partidos.add(new Partido("Round of 16 3 Winner", "Round of 16 4 Winner", crearFechaHonduras(2026, 7, 11, 15, 0), 0, 0));
-//        partidos.add(new Partido("Round of 16 7 Winner", "Round of 16 8 Winner", crearFechaHonduras(2026, 7, 11, 19, 0), 0, 0));
+        partidos.add(new Partido("South Africa", "Canada", crearFechaHonduras(2026, 6, 28, 13, 0), 0, 0));
+        partidos.add(new Partido("Brazil", "Japan", crearFechaHonduras(2026, 6, 29, 11, 0), 0, 0));
+        partidos.add(new Partido("Germany", "Paraguay", crearFechaHonduras(2026, 6, 29, 14, 30), 0, 0));
+        partidos.add(new Partido("Netherlands", "Morocco", crearFechaHonduras(2026, 6, 29, 19, 0), 0, 0));
+        partidos.add(new Partido("Ivory Coast", "Norway", crearFechaHonduras(2026, 6, 30, 11, 0), 0, 0));
+        partidos.add(new Partido("France", "Sweden", crearFechaHonduras(2026, 6, 30, 15, 0), 0, 0));
+        partidos.add(new Partido("Mexico", "Ecuador", crearFechaHonduras(2026, 6, 30, 19, 0), 0, 0));
+        partidos.add(new Partido("England", "Congo DR", crearFechaHonduras(2026, 7, 1, 10, 0), 0, 0));
+        partidos.add(new Partido("Belgium", "Senegal", crearFechaHonduras(2026, 7, 1, 14, 0), 0, 0));
+        partidos.add(new Partido("United States", "Bosnia-Herzegovina", crearFechaHonduras(2026, 7, 1, 18, 0), 0, 0));
+        partidos.add(new Partido("Spain", "Austria", crearFechaHonduras(2026, 7, 2, 13, 0), 0, 0));
+        partidos.add(new Partido("Portugal", "Croatia", crearFechaHonduras(2026, 7, 2, 17, 0), 0, 0));
+        partidos.add(new Partido("Switzerland", "Algeria", crearFechaHonduras(2026, 7, 2, 21, 0), 0, 0));
+        partidos.add(new Partido("Australia", "Egypt", crearFechaHonduras(2026, 7, 3, 12, 0), 0, 0));
+        partidos.add(new Partido("Argentina", "Cape Verde", crearFechaHonduras(2026, 7, 3, 16, 0), 0, 0));
+        partidos.add(new Partido("Colombia", "Ghana", crearFechaHonduras(2026, 7, 3, 19, 30), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 1 Winner", "Round of 32 Match 3 Winner", crearFechaHonduras(2026, 7, 4, 11, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 2 Winner", "Round of 32 Match 5 Winner", crearFechaHonduras(2026, 7, 4, 15, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 4 Winner", "Round of 32 Match 6 Winner", crearFechaHonduras(2026, 7, 5, 14, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 7 Winner", "Round of 32 Match 8 Winner", crearFechaHonduras(2026, 7, 5, 18, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 11 Winner", "Round of 32 Match 12 Winner", crearFechaHonduras(2026, 7, 6, 13, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 9 Winner", "Round of 32 Match 10 Winner", crearFechaHonduras(2026, 7, 6, 18, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 14 Winner", "Round of 32 Match 16 Winner", crearFechaHonduras(2026, 7, 7, 10, 0), 0, 0));
+        partidos.add(new Partido("Round of 32 Match 13 Winner", "Round of 32 Match 15 Winner", crearFechaHonduras(2026, 7, 7, 14, 0), 0, 0));
+        partidos.add(new Partido("Round of 16 Match 1 Winner", "Round of 16 Match 2 Winner", crearFechaHonduras(2026, 7, 9, 14, 0), 0, 0));
+        partidos.add(new Partido("Round of 16 Match 5 Winner", "Round of 16 Match 6 Winner", crearFechaHonduras(2026, 7, 10, 13, 0), 0, 0));
+        partidos.add(new Partido("Round of 16 Match 3 Winner", "Round of 16 Match 4 Winner", crearFechaHonduras(2026, 7, 11, 15, 0), 0, 0));
+        partidos.add(new Partido("Round of 16 Match 7 Winner", "Round of 16 Match 8 Winner", crearFechaHonduras(2026, 7, 11, 19, 0), 0, 0));
     }
 
     private Date crearFechaHonduras(int anio, int mes, int dia, int hora, int minuto) {
@@ -140,6 +140,7 @@ public class Partidos implements Serializable {
 
     public List<Partido> getPartidosNoJugados(){
         Date ahora = new Date();
+        ahora.setHours(ahora.getHours() - 24); //todo: quitar
         return partidos
                 .stream()
                 .filter(p -> p.getFechaHora().after(ahora))
@@ -148,6 +149,7 @@ public class Partidos implements Serializable {
 
     public List<Partido> getPartidosYaJugados(){
         Date ahora = new Date();
+        ahora.setHours(ahora.getHours() + 24);//todo: quitar
         return partidos
                 .stream()
                 .filter(p -> p.getFechaHora().before(ahora))

@@ -8,7 +8,6 @@ import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Named("PrediccionesBean")
@@ -17,12 +16,13 @@ public class Predicciones implements Serializable {
     @Inject
     private Login loginBean;
 
+    @Inject
+    private QuinielaStore quinielaStoreBean;
+
     private Partido partidoSeleccionado;
-    private List<Pronostico> pronosticos;
     private Pronostico pronosticoActual;
 
     public Predicciones() {
-        this.pronosticos = new ArrayList<>();
         limpiarCampos();
     }
 
@@ -41,10 +41,16 @@ public class Predicciones implements Serializable {
             return;
         }
 
+        if (this.partidoSeleccionado == null) {
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_ERROR, "Seleccione un partido para registrar el pronostico.", null));
+            return;
+        }
+
         pronosticoActual.setUsuario(loginBean.getCorreo());
         pronosticoActual.setPartido(this.partidoSeleccionado);
         pronosticoActual.setFechaHoraPronostico(new java.util.Date());
-        this.pronosticos.add(pronosticoActual);
+        quinielaStoreBean.registrarPronostico(pronosticoActual);
         limpiarCampos();
     }
 
@@ -54,11 +60,11 @@ public class Predicciones implements Serializable {
     }
 
     public List<Pronostico> getPronosticos() {
-        return pronosticos;
+        return quinielaStoreBean.getPronosticos();
     }
 
     public void setPronosticos(List<Pronostico> pronosticos) {
-        this.pronosticos = pronosticos;
+        quinielaStoreBean.reemplazarPronosticos(pronosticos);
     }
 
     public Pronostico getPronosticoActual() {
