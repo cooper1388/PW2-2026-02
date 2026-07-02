@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <style>
+        p {
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
+    <h:head></h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="messages"/>
+            <p:progressBar id="progressBarIndeterminate" style="height:6px" mode="indeterminate"/>
+
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:commandButton type="button" icon="pi pi-file" styleClass="mr-2" style="margin-left: .5em"/>
+                    <p:commandButton type="button" icon="pi pi-folder-open" styleClass="ui-button-success" style="margin-left: .5em"/>
+
+                    <p:commandButton type="button" title="Save" icon="pi pi-save" styleClass="ui-button-help mr-2" style="margin-left: .5em"/>
+                    <p:commandButton type="button" title="Print" icon="pi pi-print" styleClass="ui-button-warning mr-2" style="margin-left: .5em"/>
+                    <p:commandButton type="button" title="Delete" icon="pi pi-trash" styleClass="ui-button-danger" style="margin-left: .5em"/>
+                </p:toolbarGroup>
+
+                <p:toolbarGroup align="right">
+                    <p:menuButton value="Opciones" styleClass="ui-button-help">
+                        <p:menuitem value="Cerrar Sesión" update="messages" icon="pi pi-power-off"/>
+                        <p:menuitem value="Cambiar Contraseña"  update="messages" icon="pi pi-user-edit"/>
+                        <p:menuitem value="Recuperar Usuario"  ajax="false" icon="pi pi-users"/>
+                        <p:menuitem value="Ayuda" url="http://www.primefaces.org" icon="pi pi-comment"/>
+                    </p:menuButton>
+                </p:toolbarGroup>
+            </p:toolbar>
+
+            <p:card style="width: 25em">
+                <f:facet name="header">
+                    <img alt="user header" src="https://www.primefaces.org/presskit/primeng-logo-black.png"/>
+                </f:facet>
+                <f:facet name="title">
+                    Card Avanzado
+                </f:facet>
+                <f:facet name="subtitle">
+                    Subtitulo
+                </f:facet>
+
+                <p>Aplicativo de pruebas de la tecnología JSF con la librería de Primefaces corriendo en un servidor de aplicaciones Tomcat v11.0.15</p>
+
+                <f:facet name="footer">
+                    <p:commandButton icon="pi pi-check" styleClass="rounded-button ui-button-primary" value="Guardar"/>
+                    <p:commandButton icon="pi pi-times" styleClass="rounded-button ui-button-danger" style="margin-left: .5em"/>
+                </f:facet>
+            </p:card>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
