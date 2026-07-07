@@ -1,0 +1,369 @@
+usuario,rival1,rival2,fechaHora,golesRival1,golesRival2
+ana@demo.com,Mexico,South Africa,2026-06-11 13:00,0,4
+bruno@demo.com,Mexico,South Africa,2026-06-11 13:00,4,2
+carla@demo.com,Mexico,South Africa,2026-06-11 13:00,2,1
+diego@demo.com,Mexico,South Africa,2026-06-11 13:00,3,2
+ana@demo.com,South Korea,Czechia,2026-06-11 20:00,2,1
+bruno@demo.com,South Korea,Czechia,2026-06-11 20:00,3,2
+carla@demo.com,South Korea,Czechia,2026-06-11 20:00,2,3
+diego@demo.com,South Korea,Czechia,2026-06-11 20:00,0,4
+ana@demo.com,Canada,Bosnia-Herzegovina,2026-06-12 13:00,1,2
+bruno@demo.com,Canada,Bosnia-Herzegovina,2026-06-12 13:00,2,3
+carla@demo.com,Canada,Bosnia-Herzegovina,2026-06-12 13:00,3,4
+diego@demo.com,Canada,Bosnia-Herzegovina,2026-06-12 13:00,0,1
+ana@demo.com,United States,Paraguay,2026-06-12 19:00,0,3
+bruno@demo.com,United States,Paraguay,2026-06-12 19:00,1,4
+carla@demo.com,United States,Paraguay,2026-06-12 19:00,2,0
+diego@demo.com,United States,Paraguay,2026-06-12 19:00,3,1
+ana@demo.com,Qatar,Switzerland,2026-06-13 13:00,1,1
+bruno@demo.com,Qatar,Switzerland,2026-06-13 13:00,2,0
+carla@demo.com,Qatar,Switzerland,2026-06-13 13:00,3,1
+diego@demo.com,Qatar,Switzerland,2026-06-13 13:00,4,2
+ana@demo.com,Brazil,Morocco,2026-06-13 16:00,4,0
+bruno@demo.com,Brazil,Morocco,2026-06-13 16:00,0,4
+carla@demo.com,Brazil,Morocco,2026-06-13 16:00,1,2
+diego@demo.com,Brazil,Morocco,2026-06-13 16:00,2,3
+ana@demo.com,Haiti,Scotland,2026-06-13 19:00,1,2
+bruno@demo.com,Haiti,Scotland,2026-06-13 19:00,3,0
+carla@demo.com,Haiti,Scotland,2026-06-13 19:00,4,2
+diego@demo.com,Haiti,Scotland,2026-06-13 19:00,0,2
+ana@demo.com,Australia,Türkiye,2026-06-13 22:00,3,2
+bruno@demo.com,Australia,Türkiye,2026-06-13 22:00,3,4
+carla@demo.com,Australia,Türkiye,2026-06-13 22:00,0,4
+diego@demo.com,Australia,Türkiye,2026-06-13 22:00,1,4
+ana@demo.com,Germany,Curaçao,2026-06-14 11:00,0,2
+bruno@demo.com,Germany,Curaçao,2026-06-14 11:00,1,3
+carla@demo.com,Germany,Curaçao,2026-06-14 11:00,4,1
+diego@demo.com,Germany,Curaçao,2026-06-14 11:00,3,0
+ana@demo.com,Netherlands,Japan,2026-06-14 14:00,1,2
+bruno@demo.com,Netherlands,Japan,2026-06-14 14:00,2,0
+carla@demo.com,Netherlands,Japan,2026-06-14 14:00,3,1
+diego@demo.com,Netherlands,Japan,2026-06-14 14:00,1,2
+ana@demo.com,Ivory Coast,Ecuador,2026-06-14 17:00,0,4
+bruno@demo.com,Ivory Coast,Ecuador,2026-06-14 17:00,1,1
+carla@demo.com,Ivory Coast,Ecuador,2026-06-14 17:00,2,1
+diego@demo.com,Ivory Coast,Ecuador,2026-06-14 17:00,3,2
+ana@demo.com,Sweden,Tunisia,2026-06-14 20:00,2,3
+bruno@demo.com,Sweden,Tunisia,2026-06-14 20:00,3,4
+carla@demo.com,Sweden,Tunisia,2026-06-14 20:00,4,2
+diego@demo.com,Sweden,Tunisia,2026-06-14 20:00,0,1
+ana@demo.com,Spain,Cape Verde,2026-06-15 10:00,0,2
+bruno@demo.com,Spain,Cape Verde,2026-06-15 10:00,1,3
+carla@demo.com,Spain,Cape Verde,2026-06-15 10:00,2,4
+diego@demo.com,Spain,Cape Verde,2026-06-15 10:00,3,0
+ana@demo.com,Belgium,Egypt,2026-06-15 13:00,4,1
+bruno@demo.com,Belgium,Egypt,2026-06-15 13:00,0,0
+carla@demo.com,Belgium,Egypt,2026-06-15 13:00,1,1
+diego@demo.com,Belgium,Egypt,2026-06-15 13:00,2,2
+ana@demo.com,Saudi Arabia,Uruguay,2026-06-15 16:00,3,1
+bruno@demo.com,Saudi Arabia,Uruguay,2026-06-15 16:00,2,1
+carla@demo.com,Saudi Arabia,Uruguay,2026-06-15 16:00,0,4
+diego@demo.com,Saudi Arabia,Uruguay,2026-06-15 16:00,1,0
+ana@demo.com,Iran,New Zealand,2026-06-15 19:00,2,0
+bruno@demo.com,Iran,New Zealand,2026-06-15 19:00,3,3
+carla@demo.com,Iran,New Zealand,2026-06-15 19:00,2,3
+diego@demo.com,Iran,New Zealand,2026-06-15 19:00,0,3
+ana@demo.com,France,Senegal,2026-06-16 13:00,3,4
+bruno@demo.com,France,Senegal,2026-06-16 13:00,4,0
+carla@demo.com,France,Senegal,2026-06-16 13:00,0,1
+diego@demo.com,France,Senegal,2026-06-16 13:00,2,1
+ana@demo.com,Iraq,Norway,2026-06-16 16:00,3,4
+bruno@demo.com,Iraq,Norway,2026-06-16 16:00,4,0
+carla@demo.com,Iraq,Norway,2026-06-16 16:00,0,1
+diego@demo.com,Iraq,Norway,2026-06-16 16:00,1,3
+ana@demo.com,Argentina,Algeria,2026-06-16 19:00,2,4
+bruno@demo.com,Argentina,Algeria,2026-06-16 19:00,3,0
+carla@demo.com,Argentina,Algeria,2026-06-16 19:00,4,1
+diego@demo.com,Argentina,Algeria,2026-06-16 19:00,0,2
+ana@demo.com,Austria,Jordan,2026-06-16 22:00,2,3
+bruno@demo.com,Austria,Jordan,2026-06-16 22:00,3,2
+carla@demo.com,Austria,Jordan,2026-06-16 22:00,4,3
+diego@demo.com,Austria,Jordan,2026-06-16 22:00,0,4
+ana@demo.com,Portugal,Congo DR,2026-06-17 11:00,1,2
+bruno@demo.com,Portugal,Congo DR,2026-06-17 11:00,3,2
+carla@demo.com,Portugal,Congo DR,2026-06-17 11:00,4,0
+diego@demo.com,Portugal,Congo DR,2026-06-17 11:00,0,1
+ana@demo.com,England,Croatia,2026-06-17 14:00,3,1
+bruno@demo.com,England,Croatia,2026-06-17 14:00,3,4
+carla@demo.com,England,Croatia,2026-06-17 14:00,0,4
+diego@demo.com,England,Croatia,2026-06-17 14:00,1,4
+ana@demo.com,Ghana,Panama,2026-06-17 17:00,0,3
+bruno@demo.com,Ghana,Panama,2026-06-17 17:00,1,4
+carla@demo.com,Ghana,Panama,2026-06-17 17:00,4,0
+diego@demo.com,Ghana,Panama,2026-06-17 17:00,3,0
+ana@demo.com,Uzbekistan,Colombia,2026-06-17 20:00,2,3
+bruno@demo.com,Uzbekistan,Colombia,2026-06-17 20:00,3,4
+carla@demo.com,Uzbekistan,Colombia,2026-06-17 20:00,4,0
+diego@demo.com,Uzbekistan,Colombia,2026-06-17 20:00,2,2
+ana@demo.com,Czechia,South Africa,2026-06-18 10:00,3,3
+bruno@demo.com,Czechia,South Africa,2026-06-18 10:00,4,1
+carla@demo.com,Czechia,South Africa,2026-06-18 10:00,0,2
+diego@demo.com,Czechia,South Africa,2026-06-18 10:00,1,3
+ana@demo.com,Switzerland,Bosnia-Herzegovina,2026-06-18 13:00,4,0
+bruno@demo.com,Switzerland,Bosnia-Herzegovina,2026-06-18 13:00,0,2
+carla@demo.com,Switzerland,Bosnia-Herzegovina,2026-06-18 13:00,1,2
+diego@demo.com,Switzerland,Bosnia-Herzegovina,2026-06-18 13:00,2,3
+ana@demo.com,Canada,Qatar,2026-06-18 16:00,3,4
+bruno@demo.com,Canada,Qatar,2026-06-18 16:00,4,0
+carla@demo.com,Canada,Qatar,2026-06-18 16:00,0,3
+diego@demo.com,Canada,Qatar,2026-06-18 16:00,1,2
+ana@demo.com,Mexico,South Korea,2026-06-18 19:00,0,3
+bruno@demo.com,Mexico,South Korea,2026-06-18 19:00,1,1
+carla@demo.com,Mexico,South Korea,2026-06-18 19:00,2,2
+diego@demo.com,Mexico,South Korea,2026-06-18 19:00,3,3
+ana@demo.com,United States,Australia,2026-06-19 13:00,1,1
+bruno@demo.com,United States,Australia,2026-06-19 13:00,0,3
+carla@demo.com,United States,Australia,2026-06-19 13:00,3,3
+diego@demo.com,United States,Australia,2026-06-19 13:00,4,4
+ana@demo.com,Scotland,Morocco,2026-06-19 16:00,3,3
+bruno@demo.com,Scotland,Morocco,2026-06-19 16:00,4,0
+carla@demo.com,Scotland,Morocco,2026-06-19 16:00,3,3
+diego@demo.com,Scotland,Morocco,2026-06-19 16:00,1,2
+ana@demo.com,Brazil,Haiti,2026-06-19 18:30,0,0
+bruno@demo.com,Brazil,Haiti,2026-06-19 18:30,1,3
+carla@demo.com,Brazil,Haiti,2026-06-19 18:30,2,2
+diego@demo.com,Brazil,Haiti,2026-06-19 18:30,4,3
+ana@demo.com,Türkiye,Paraguay,2026-06-19 21:00,3,3
+bruno@demo.com,Türkiye,Paraguay,2026-06-19 21:00,4,4
+carla@demo.com,Türkiye,Paraguay,2026-06-19 21:00,0,0
+diego@demo.com,Türkiye,Paraguay,2026-06-19 21:00,1,1
+ana@demo.com,Netherlands,Sweden,2026-06-20 11:00,1,2
+bruno@demo.com,Netherlands,Sweden,2026-06-20 11:00,2,3
+carla@demo.com,Netherlands,Sweden,2026-06-20 11:00,3,4
+diego@demo.com,Netherlands,Sweden,2026-06-20 11:00,4,1
+ana@demo.com,Germany,Ivory Coast,2026-06-20 14:00,4,0
+bruno@demo.com,Germany,Ivory Coast,2026-06-20 14:00,0,1
+carla@demo.com,Germany,Ivory Coast,2026-06-20 14:00,1,2
+diego@demo.com,Germany,Ivory Coast,2026-06-20 14:00,2,3
+ana@demo.com,Ecuador,Curaçao,2026-06-20 18:00,2,1
+bruno@demo.com,Ecuador,Curaçao,2026-06-20 18:00,4,0
+carla@demo.com,Ecuador,Curaçao,2026-06-20 18:00,0,1
+diego@demo.com,Ecuador,Curaçao,2026-06-20 18:00,1,2
+ana@demo.com,Tunisia,Japan,2026-06-20 22:00,0,1
+bruno@demo.com,Tunisia,Japan,2026-06-20 22:00,0,0
+carla@demo.com,Tunisia,Japan,2026-06-20 22:00,2,3
+diego@demo.com,Tunisia,Japan,2026-06-20 22:00,3,4
+ana@demo.com,Spain,Saudi Arabia,2026-06-21 10:00,2,4
+bruno@demo.com,Spain,Saudi Arabia,2026-06-21 10:00,3,0
+carla@demo.com,Spain,Saudi Arabia,2026-06-21 10:00,1,2
+diego@demo.com,Spain,Saudi Arabia,2026-06-21 10:00,0,2
+ana@demo.com,Belgium,Iran,2026-06-21 13:00,1,3
+bruno@demo.com,Belgium,Iran,2026-06-21 13:00,2,4
+carla@demo.com,Belgium,Iran,2026-06-21 13:00,3,0
+diego@demo.com,Belgium,Iran,2026-06-21 13:00,1,0
+ana@demo.com,Uruguay,Cape Verde,2026-06-21 16:00,0,1
+bruno@demo.com,Uruguay,Cape Verde,2026-06-21 16:00,1,2
+carla@demo.com,Uruguay,Cape Verde,2026-06-21 16:00,2,3
+diego@demo.com,Uruguay,Cape Verde,2026-06-21 16:00,3,4
+ana@demo.com,New Zealand,Egypt,2026-06-21 19:00,1,2
+bruno@demo.com,New Zealand,Egypt,2026-06-21 19:00,2,0
+carla@demo.com,New Zealand,Egypt,2026-06-21 19:00,3,1
+diego@demo.com,New Zealand,Egypt,2026-06-21 19:00,4,2
+ana@demo.com,Argentina,Austria,2026-06-22 11:00,3,4
+bruno@demo.com,Argentina,Austria,2026-06-22 11:00,4,1
+carla@demo.com,Argentina,Austria,2026-06-22 11:00,0,1
+diego@demo.com,Argentina,Austria,2026-06-22 11:00,1,2
+ana@demo.com,France,Iraq,2026-06-22 15:00,2,2
+bruno@demo.com,France,Iraq,2026-06-22 15:00,3,4
+carla@demo.com,France,Iraq,2026-06-22 15:00,4,2
+diego@demo.com,France,Iraq,2026-06-22 15:00,0,1
+ana@demo.com,Norway,Senegal,2026-06-22 18:00,1,3
+bruno@demo.com,Norway,Senegal,2026-06-22 18:00,0,1
+carla@demo.com,Norway,Senegal,2026-06-22 18:00,3,0
+diego@demo.com,Norway,Senegal,2026-06-22 18:00,4,1
+ana@demo.com,Jordan,Algeria,2026-06-22 21:00,3,2
+bruno@demo.com,Jordan,Algeria,2026-06-22 21:00,4,3
+carla@demo.com,Jordan,Algeria,2026-06-22 21:00,3,4
+diego@demo.com,Jordan,Algeria,2026-06-22 21:00,1,0
+ana@demo.com,Portugal,Uzbekistan,2026-06-23 11:00,4,0
+bruno@demo.com,Portugal,Uzbekistan,2026-06-23 11:00,0,2
+carla@demo.com,Portugal,Uzbekistan,2026-06-23 11:00,1,3
+diego@demo.com,Portugal,Uzbekistan,2026-06-23 11:00,3,0
+ana@demo.com,England,Ghana,2026-06-23 14:00,0,3
+bruno@demo.com,England,Ghana,2026-06-23 14:00,1,1
+carla@demo.com,England,Ghana,2026-06-23 14:00,2,0
+diego@demo.com,England,Ghana,2026-06-23 14:00,3,1
+ana@demo.com,Panama,Croatia,2026-06-23 17:00,3,4
+bruno@demo.com,Panama,Croatia,2026-06-23 17:00,4,0
+carla@demo.com,Panama,Croatia,2026-06-23 17:00,0,1
+diego@demo.com,Panama,Croatia,2026-06-23 17:00,1,2
+ana@demo.com,Colombia,Congo DR,2026-06-23 20:00,2,3
+bruno@demo.com,Colombia,Congo DR,2026-06-23 20:00,3,4
+carla@demo.com,Colombia,Congo DR,2026-06-23 20:00,4,0
+diego@demo.com,Colombia,Congo DR,2026-06-23 20:00,0,2
+ana@demo.com,Bosnia-Herzegovina,Qatar,2026-06-24 13:00,0,3
+bruno@demo.com,Bosnia-Herzegovina,Qatar,2026-06-24 13:00,2,1
+carla@demo.com,Bosnia-Herzegovina,Qatar,2026-06-24 13:00,3,2
+diego@demo.com,Bosnia-Herzegovina,Qatar,2026-06-24 13:00,4,3
+ana@demo.com,Switzerland,Canada,2026-06-24 13:00,1,2
+bruno@demo.com,Switzerland,Canada,2026-06-24 13:00,1,2
+carla@demo.com,Switzerland,Canada,2026-06-24 13:00,3,2
+diego@demo.com,Switzerland,Canada,2026-06-24 13:00,4,3
+ana@demo.com,Morocco,Haiti,2026-06-24 16:00,1,4
+bruno@demo.com,Morocco,Haiti,2026-06-24 16:00,2,3
+carla@demo.com,Morocco,Haiti,2026-06-24 16:00,0,3
+diego@demo.com,Morocco,Haiti,2026-06-24 16:00,4,2
+ana@demo.com,Scotland,Brazil,2026-06-24 16:00,4,4
+bruno@demo.com,Scotland,Brazil,2026-06-24 16:00,0,0
+carla@demo.com,Scotland,Brazil,2026-06-24 16:00,1,2
+diego@demo.com,Scotland,Brazil,2026-06-24 16:00,4,2
+ana@demo.com,Czechia,Mexico,2026-06-24 19:00,2,3
+bruno@demo.com,Czechia,Mexico,2026-06-24 19:00,3,4
+carla@demo.com,Czechia,Mexico,2026-06-24 19:00,4,0
+diego@demo.com,Czechia,Mexico,2026-06-24 19:00,0,0
+ana@demo.com,South Africa,South Korea,2026-06-24 19:00,4,0
+bruno@demo.com,South Africa,South Korea,2026-06-24 19:00,0,1
+carla@demo.com,South Africa,South Korea,2026-06-24 19:00,1,2
+diego@demo.com,South Africa,South Korea,2026-06-24 19:00,2,3
+ana@demo.com,Curaçao,Ivory Coast,2026-06-25 14:00,3,1
+bruno@demo.com,Curaçao,Ivory Coast,2026-06-25 14:00,4,4
+carla@demo.com,Curaçao,Ivory Coast,2026-06-25 14:00,0,0
+diego@demo.com,Curaçao,Ivory Coast,2026-06-25 14:00,1,1
+ana@demo.com,Ecuador,Germany,2026-06-25 14:00,0,3
+bruno@demo.com,Ecuador,Germany,2026-06-25 14:00,1,3
+carla@demo.com,Ecuador,Germany,2026-06-25 14:00,2,3
+diego@demo.com,Ecuador,Germany,2026-06-25 14:00,3,4
+ana@demo.com,Japan,Sweden,2026-06-25 17:00,2,1
+bruno@demo.com,Japan,Sweden,2026-06-25 17:00,1,0
+carla@demo.com,Japan,Sweden,2026-06-25 17:00,4,0
+diego@demo.com,Japan,Sweden,2026-06-25 17:00,0,4
+ana@demo.com,Tunisia,Netherlands,2026-06-25 17:00,1,0
+bruno@demo.com,Tunisia,Netherlands,2026-06-25 17:00,2,1
+carla@demo.com,Tunisia,Netherlands,2026-06-25 17:00,1,3
+diego@demo.com,Tunisia,Netherlands,2026-06-25 17:00,4,3
+ana@demo.com,Paraguay,Australia,2026-06-25 20:00,1,1
+bruno@demo.com,Paraguay,Australia,2026-06-25 20:00,2,2
+carla@demo.com,Paraguay,Australia,2026-06-25 20:00,3,3
+diego@demo.com,Paraguay,Australia,2026-06-25 20:00,0,3
+ana@demo.com,Türkiye,United States,2026-06-25 20:00,2,2
+bruno@demo.com,Türkiye,United States,2026-06-25 20:00,3,4
+carla@demo.com,Türkiye,United States,2026-06-25 20:00,4,0
+diego@demo.com,Türkiye,United States,2026-06-25 20:00,0,1
+ana@demo.com,Norway,France,2026-06-26 13:00,0,2
+bruno@demo.com,Norway,France,2026-06-26 13:00,1,0
+carla@demo.com,Norway,France,2026-06-26 13:00,2,4
+diego@demo.com,Norway,France,2026-06-26 13:00,3,0
+ana@demo.com,Senegal,Iraq,2026-06-26 13:00,3,3
+bruno@demo.com,Senegal,Iraq,2026-06-26 13:00,4,4
+carla@demo.com,Senegal,Iraq,2026-06-26 13:00,0,0
+diego@demo.com,Senegal,Iraq,2026-06-26 13:00,1,1
+ana@demo.com,Cape Verde,Saudi Arabia,2026-06-26 18:00,4,2
+bruno@demo.com,Cape Verde,Saudi Arabia,2026-06-26 18:00,1,4
+carla@demo.com,Cape Verde,Saudi Arabia,2026-06-26 18:00,2,0
+diego@demo.com,Cape Verde,Saudi Arabia,2026-06-26 18:00,3,2
+ana@demo.com,Uruguay,Spain,2026-06-26 18:00,4,3
+bruno@demo.com,Uruguay,Spain,2026-06-26 18:00,4,1
+carla@demo.com,Uruguay,Spain,2026-06-26 18:00,1,0
+diego@demo.com,Uruguay,Spain,2026-06-26 18:00,2,1
+ana@demo.com,Egypt,Iran,2026-06-26 21:00,1,2
+bruno@demo.com,Egypt,Iran,2026-06-26 21:00,2,1
+carla@demo.com,Egypt,Iran,2026-06-26 21:00,0,2
+diego@demo.com,Egypt,Iran,2026-06-26 21:00,4,3
+ana@demo.com,New Zealand,Belgium,2026-06-26 21:00,4,0
+bruno@demo.com,New Zealand,Belgium,2026-06-26 21:00,0,4
+carla@demo.com,New Zealand,Belgium,2026-06-26 21:00,1,2
+diego@demo.com,New Zealand,Belgium,2026-06-26 21:00,4,4
+ana@demo.com,Croatia,Ghana,2026-06-27 15:00,4,1
+bruno@demo.com,Croatia,Ghana,2026-06-27 15:00,0,2
+carla@demo.com,Croatia,Ghana,2026-06-27 15:00,1,4
+diego@demo.com,Croatia,Ghana,2026-06-27 15:00,2,4
+ana@demo.com,Panama,England,2026-06-27 15:00,0,1
+bruno@demo.com,Panama,England,2026-06-27 15:00,1,2
+carla@demo.com,Panama,England,2026-06-27 15:00,2,3
+diego@demo.com,Panama,England,2026-06-27 15:00,3,3
+ana@demo.com,Colombia,Portugal,2026-06-27 17:30,1,3
+bruno@demo.com,Colombia,Portugal,2026-06-27 17:30,2,4
+carla@demo.com,Colombia,Portugal,2026-06-27 17:30,3,0
+diego@demo.com,Colombia,Portugal,2026-06-27 17:30,4,1
+ana@demo.com,Congo DR,Uzbekistan,2026-06-27 17:30,3,2
+bruno@demo.com,Congo DR,Uzbekistan,2026-06-27 17:30,4,0
+carla@demo.com,Congo DR,Uzbekistan,2026-06-27 17:30,0,1
+diego@demo.com,Congo DR,Uzbekistan,2026-06-27 17:30,1,2
+ana@demo.com,Algeria,Austria,2026-06-27 20:00,1,4
+bruno@demo.com,Algeria,Austria,2026-06-27 20:00,0,1
+carla@demo.com,Algeria,Austria,2026-06-27 20:00,3,1
+diego@demo.com,Algeria,Austria,2026-06-27 20:00,4,2
+ana@demo.com,Jordan,Argentina,2026-06-27 20:00,2,3
+bruno@demo.com,Jordan,Argentina,2026-06-27 20:00,3,4
+carla@demo.com,Jordan,Argentina,2026-06-27 20:00,2,2
+diego@demo.com,Jordan,Argentina,2026-06-27 20:00,0,1
+ana@demo.com,South Africa,Canada,2026-06-28 13:00,2,2
+bruno@demo.com,South Africa,Canada,2026-06-28 13:00,3,3
+carla@demo.com,South Africa,Canada,2026-06-28 13:00,4,4
+diego@demo.com,South Africa,Canada,2026-06-28 13:00,1,0
+ana@demo.com,Brazil,Japan,2026-06-29 11:00,3,4
+bruno@demo.com,Brazil,Japan,2026-06-29 11:00,4,0
+carla@demo.com,Brazil,Japan,2026-06-29 11:00,0,1
+diego@demo.com,Brazil,Japan,2026-06-29 11:00,1,2
+ana@demo.com,Germany,Paraguay,2026-06-29 14:30,3,3
+bruno@demo.com,Germany,Paraguay,2026-06-29 14:30,4,0
+carla@demo.com,Germany,Paraguay,2026-06-29 14:30,0,1
+diego@demo.com,Germany,Paraguay,2026-06-29 14:30,1,2
+ana@demo.com,Netherlands,Morocco,2026-06-29 19:00,4,0
+bruno@demo.com,Netherlands,Morocco,2026-06-29 19:00,0,3
+carla@demo.com,Netherlands,Morocco,2026-06-29 19:00,1,2
+diego@demo.com,Netherlands,Morocco,2026-06-29 19:00,2,3
+ana@demo.com,Ivory Coast,Norway,2026-06-30 11:00,2,0
+bruno@demo.com,Ivory Coast,Norway,2026-06-30 11:00,4,4
+carla@demo.com,Ivory Coast,Norway,2026-06-30 11:00,0,0
+diego@demo.com,Ivory Coast,Norway,2026-06-30 11:00,1,1
+ana@demo.com,France,Sweden,2026-06-30 15:00,0,1
+bruno@demo.com,France,Sweden,2026-06-30 15:00,0,0
+carla@demo.com,France,Sweden,2026-06-30 15:00,2,3
+diego@demo.com,France,Sweden,2026-06-30 15:00,3,0
+ana@demo.com,Mexico,Ecuador,2026-06-30 19:00,4,3
+bruno@demo.com,Mexico,Ecuador,2026-06-30 19:00,0,4
+carla@demo.com,Mexico,Ecuador,2026-06-30 19:00,3,1
+diego@demo.com,Mexico,Ecuador,2026-06-30 19:00,2,1
+ana@demo.com,England,Congo DR,2026-07-01 10:00,2,0
+bruno@demo.com,England,Congo DR,2026-07-01 10:00,3,4
+carla@demo.com,England,Congo DR,2026-07-01 10:00,4,0
+diego@demo.com,England,Congo DR,2026-07-01 10:00,2,0
+ana@demo.com,Belgium,Senegal,2026-07-01 14:00,1,2
+bruno@demo.com,Belgium,Senegal,2026-07-01 14:00,2,1
+carla@demo.com,Belgium,Senegal,2026-07-01 14:00,3,4
+diego@demo.com,Belgium,Senegal,2026-07-01 14:00,4,0
+ana@demo.com,United States,Bosnia-Herzegovina,2026-07-01 18:00,4,4
+bruno@demo.com,United States,Bosnia-Herzegovina,2026-07-01 18:00,0,0
+carla@demo.com,United States,Bosnia-Herzegovina,2026-07-01 18:00,1,2
+diego@demo.com,United States,Bosnia-Herzegovina,2026-07-01 18:00,2,2
+ana@demo.com,Spain,Austria,2026-07-02 13:00,0,4
+bruno@demo.com,Spain,Austria,2026-07-02 13:00,1,0
+carla@demo.com,Spain,Austria,2026-07-02 13:00,2,1
+diego@demo.com,Spain,Austria,2026-07-02 13:00,3,1
+ana@demo.com,Portugal,Croatia,2026-07-02 17:00,0,0
+bruno@demo.com,Portugal,Croatia,2026-07-02 17:00,1,2
+carla@demo.com,Portugal,Croatia,2026-07-02 17:00,2,3
+diego@demo.com,Portugal,Croatia,2026-07-02 17:00,3,4
+ana@demo.com,Switzerland,Algeria,2026-07-02 21:00,2,2
+bruno@demo.com,Switzerland,Algeria,2026-07-02 21:00,1,2
+carla@demo.com,Switzerland,Algeria,2026-07-02 21:00,4,1
+diego@demo.com,Switzerland,Algeria,2026-07-02 21:00,0,2
+ana@demo.com,Australia,Egypt,2026-07-03 12:00,2,4
+bruno@demo.com,Australia,Egypt,2026-07-03 12:00,3,1
+carla@demo.com,Australia,Egypt,2026-07-03 12:00,2,1
+diego@demo.com,Australia,Egypt,2026-07-03 12:00,0,2
+ana@demo.com,Argentina,Cape Verde,2026-07-03 16:00,1,2
+bruno@demo.com,Argentina,Cape Verde,2026-07-03 16:00,2,3
+carla@demo.com,Argentina,Cape Verde,2026-07-03 16:00,3,1
+diego@demo.com,Argentina,Cape Verde,2026-07-03 16:00,0,1
+ana@demo.com,Colombia,Ghana,2026-07-03 19:30,2,3
+bruno@demo.com,Colombia,Ghana,2026-07-03 19:30,3,4
+carla@demo.com,Colombia,Ghana,2026-07-03 19:30,4,0
+diego@demo.com,Colombia,Ghana,2026-07-03 19:30,0,1
+ana@demo.com,Round of 32 Match 1 Winner,Round of 32 Match 3 Winner,2026-07-04 11:00,4,3
+bruno@demo.com,Round of 32 Match 1 Winner,Round of 32 Match 3 Winner,2026-07-04 11:00,0,4
+carla@demo.com,Round of 32 Match 1 Winner,Round of 32 Match 3 Winner,2026-07-04 11:00,1,0
+diego@demo.com,Round of 32 Match 1 Winner,Round of 32 Match 3 Winner,2026-07-04 11:00,2,1
+ana@demo.com,Round of 32 Match 2 Winner,Round of 32 Match 5 Winner,2026-07-04 15:00,1,1
+bruno@demo.com,Round of 32 Match 2 Winner,Round of 32 Match 5 Winner,2026-07-04 15:00,2,3
+carla@demo.com,Round of 32 Match 2 Winner,Round of 32 Match 5 Winner,2026-07-04 15:00,3,4
+diego@demo.com,Round of 32 Match 2 Winner,Round of 32 Match 5 Winner,2026-07-04 15:00,4,0
+ana@demo.com,Round of 32 Match 4 Winner,Round of 32 Match 6 Winner,2026-07-05 14:00,4,0
+bruno@demo.com,Round of 32 Match 4 Winner,Round of 32 Match 6 Winner,2026-07-05 14:00,1,0
+carla@demo.com,Round of 32 Match 4 Winner,Round of 32 Match 6 Winner,2026-07-05 14:00,2,4
+diego@demo.com,Round of 32 Match 4 Winner,Round of 32 Match 6 Winner,2026-07-05 14:00,3,0
+ana@demo.com,Round of 32 Match 7 Winner,Round of 32 Match 8 Winner,2026-07-05 18:00,2,1
+bruno@demo.com,Round of 32 Match 7 Winner,Round of 32 Match 8 Winner,2026-07-05 18:00,2,3
+carla@demo.com,Round of 32 Match 7 Winner,Round of 32 Match 8 Winner,2026-07-05 18:00,4,3
+diego@demo.com,Round of 32 Match 7 Winner,Round of 32 Match 8 Winner,2026-07-05 18:00,0,4

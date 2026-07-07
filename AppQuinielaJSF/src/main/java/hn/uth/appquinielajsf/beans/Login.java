@@ -4,6 +4,7 @@ import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
+import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
 import java.io.IOException;
@@ -17,6 +18,9 @@ public class Login implements Serializable {
             Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
 
     private String correo;
+
+    @Inject
+    private CsvDataLoader csvDataLoader;
 
     public Login() {
         this.correo = "";
@@ -53,12 +57,14 @@ public class Login implements Serializable {
     }
 
     public void validarSesion() {
+        csvDataLoader.inicializarSiNecesario();
         if (!isAutenticado()) {
             redirigir("/login.xhtml");
         }
     }
 
     public void redirigirSiAutenticado() {
+        csvDataLoader.inicializarSiNecesario();
         if (isAutenticado()) {
             redirigir("/index.xhtml");
         }

@@ -6,6 +6,7 @@
 <f:view>
     <f:metadata>
         <f:event type="preRenderView" listener="#{LoginBean.validarSesion}"/>
+        <f:event type="preRenderView" listener="#{TablaPosicionesBean.exportarTablaCsv}"/>
     </f:metadata>
 
     <h:head>
