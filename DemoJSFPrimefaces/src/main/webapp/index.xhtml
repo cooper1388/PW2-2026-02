@@ -1,60 +1,195 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="es"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="jakarta.faces.core"
       xmlns:h="jakarta.faces.html"
       xmlns:p="primefaces">
 <f:view>
-    <style>
-        p {
-            line-height: 1.5;
-            margin: 0;
-        }
-    </style>
-    <h:head></h:head>
+    <h:head>
+        <title>Dashboard de Quiniela</title>
+    </h:head>
     <h:body>
-        <h:form>
-            <p:growl id="messages"/>
-            <p:progressBar id="progressBarIndeterminate" style="height:6px" mode="indeterminate"/>
+        <h:form id="dashboardForm">
+            <p:growl id="messages" showDetail="true" life="5000"/>
 
-            <p:toolbar>
+            <p:toolbar style="margin-bottom:1rem;">
                 <p:toolbarGroup>
-                    <p:commandButton type="button" icon="pi pi-file" styleClass="mr-2" style="margin-left: .5em"/>
-                    <p:commandButton type="button" icon="pi pi-folder-open" styleClass="ui-button-success" style="margin-left: .5em"/>
-
-                    <p:commandButton type="button" title="Save" icon="pi pi-save" styleClass="ui-button-help mr-2" style="margin-left: .5em"/>
-                    <p:commandButton type="button" title="Print" icon="pi pi-print" styleClass="ui-button-warning mr-2" style="margin-left: .5em"/>
-                    <p:commandButton type="button" title="Delete" icon="pi pi-trash" styleClass="ui-button-danger" style="margin-left: .5em"/>
+                    <h:panelGroup layout="block">
+                        <h:outputText value="Dashboard de quiniela" style="font-size:1.6rem;font-weight:700;display:block;"/>
+                        <h:outputText value="Analisis de usuarios, ranking de puntos y distribucion de aciertos desde C:\app-quiniela\tabla.csv"/>
+                    </h:panelGroup>
                 </p:toolbarGroup>
-
                 <p:toolbarGroup align="right">
-                    <p:menuButton value="Opciones" styleClass="ui-button-help">
-                        <p:menuitem value="Cerrar Sesión" update="messages" icon="pi pi-power-off"/>
-                        <p:menuitem value="Cambiar Contraseña"  update="messages" icon="pi pi-user-edit"/>
-                        <p:menuitem value="Recuperar Usuario"  ajax="false" icon="pi pi-users"/>
-                        <p:menuitem value="Ayuda" url="http://www.primefaces.org" icon="pi pi-comment"/>
-                    </p:menuButton>
+                    <p:commandButton value="Recargar CSV"
+                                     icon="pi pi-refresh"
+                                     styleClass="ui-button-info"
+                                     action="#{quinielaDashboardBean.reload}"
+                                     update="@form"/>
                 </p:toolbarGroup>
             </p:toolbar>
 
-            <p:card style="width: 25em">
+            <p:panel style="margin-bottom:1rem;">
                 <f:facet name="header">
-                    <img alt="user header" src="https://www.primefaces.org/presskit/primeng-logo-black.png"/>
+                    <h:panelGroup>
+                        <h:outputText value="Estado de carga" style="font-weight:600;margin-right:.5rem;"/>
+                        <p:badge value="ACTIVO" severity="success" rendered="#{quinielaDashboardBean.dataDisponible}" style="margin-right:.35rem;"/>
+                        <p:badge value="SIN DATOS" severity="danger" rendered="#{not quinielaDashboardBean.dataDisponible}" style="margin-right:.35rem;"/>
+                        <p:tag value="CSV" severity="info" rounded="true"/>
+                    </h:panelGroup>
                 </f:facet>
-                <f:facet name="title">
-                    Card Avanzado
-                </f:facet>
-                <f:facet name="subtitle">
-                    Subtitulo
-                </f:facet>
+                <p:panelGrid columns="2" layout="tabular" style="width:100%;">
+                    <h:outputText value="Estado" style="font-weight:600;"/>
+                    <h:outputText value="#{quinielaDashboardBean.estadoCarga}"/>
+                    <h:outputText value="Fuente" style="font-weight:600;"/>
+                    <h:outputText value="#{quinielaDashboardBean.fuenteDatos}"/>
+                    <h:outputText value="Ultima generacion" style="font-weight:600;"/>
+                    <h:outputText value="#{quinielaDashboardBean.fechaGeneracion}"/>
+                </p:panelGrid>
+            </p:panel>
 
-                <p>Aplicativo de pruebas de la tecnología JSF con la librería de Primefaces corriendo en un servidor de aplicaciones Tomcat v11.0.15</p>
+            <p:outputPanel rendered="#{quinielaDashboardBean.dataDisponible}">
 
-                <f:facet name="footer">
-                    <p:commandButton icon="pi pi-check" styleClass="rounded-button ui-button-primary" value="Guardar"/>
-                    <p:commandButton icon="pi pi-times" styleClass="rounded-button ui-button-danger" style="margin-left: .5em"/>
-                </f:facet>
-            </p:card>
+                <p:panel header="Indicadores clave" style="margin-bottom:1rem;">
+                    <p:panelGrid columns="3" layout="tabular" style="width:100%;" columnClasses="ui-grid-col-4,ui-grid-col-4,ui-grid-col-4">
+                        <p:card>
+                            <f:facet name="title">Usuarios analizados</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.totalUsuarios}" style="font-size:1.5rem;font-weight:700;"/>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Registros cargados</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.totalRegistros}" style="font-size:1.5rem;font-weight:700;"/>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Puntos totales</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.totalPuntos}" style="font-size:1.5rem;font-weight:700;"/>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Promedio de puntos</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.promedioPuntos}" style="font-size:1.5rem;font-weight:700;">
+                                <f:convertNumber pattern="0.00"/>
+                            </h:outputText>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Mediana de puntos</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.medianaPuntos}" style="font-size:1.5rem;font-weight:700;">
+                                <f:convertNumber pattern="0.00"/>
+                            </h:outputText>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Lineas omitidas</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.lineasOmitidas}" style="font-size:1.5rem;font-weight:700;"/>
+                        </p:card>
+                    </p:panelGrid>
+                </p:panel>
+
+                <p:panel header="Insights principales" style="margin-bottom:1rem;">
+                    <p:panelGrid columns="1" layout="tabular" style="width:100%;">
+                        <p:card>
+                            <f:facet name="title">Top usuarios por puntaje</f:facet>
+                            <p:chart value="#{quinielaDashboardBean.rankingChartJson}"
+                                     style="width:100%;max-width:100%;"
+                                     canvasStyle="width:100%;height:260px;max-width:100%;"/>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Distribucion de aciertos</f:facet>
+                            <p:chart value="#{quinielaDashboardBean.aciertosChartJson}"
+                                     style="width:100%;max-width:100%;"
+                                     canvasStyle="width:100%;height:260px;max-width:100%;"/>
+                        </p:card>
+                    </p:panelGrid>
+                </p:panel>
+
+                <p:panel style="margin-bottom:1rem;">
+                    <f:facet name="header">Rendimiento destacado</f:facet>
+                    <p:panelGrid columns="2" layout="tabular" style="width:100%;">
+                        <p:card>
+                            <f:facet name="title">Mejor jugador</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.topUsuarioLabel}" style="font-size:1.3rem;font-weight:700;display:block;"/>
+                            <h:outputText value="#{quinielaDashboardBean.topUsuarioDetalle}"/>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Jugador con menor rendimiento</f:facet>
+                            <h:outputText value="#{quinielaDashboardBean.worstUsuarioLabel}" style="font-size:1.3rem;font-weight:700;display:block;"/>
+                            <h:outputText value="#{quinielaDashboardBean.worstUsuarioDetalle}"/>
+                        </p:card>
+                    </p:panelGrid>
+                </p:panel>
+
+                <p:card style="margin-bottom:1rem;">
+                    <f:facet name="title">Ranking completo de usuarios</f:facet>
+                    <p:dataTable value="#{quinielaDashboardBean.rankingUsuarios}"
+                                 var="usuario"
+                                 paginator="true"
+                                 rows="10"
+                                 stripedRows="true"
+                                 emptyMessage="No hay datos disponibles para mostrar.">
+                        <p:column headerText="#" style="width:60px;text-align:center">
+                            <h:outputText value="#{usuario.posicion}"/>
+                        </p:column>
+                        <p:column headerText="Usuario">
+                            <h:outputText value="#{usuario.usuario}"/>
+                        </p:column>
+                        <p:column headerText="Puntos" style="width:110px">
+                            <h:outputText value="#{usuario.puntosTotales}"/>
+                        </p:column>
+                        <p:column headerText="Exactos" style="width:110px">
+                            <h:outputText value="#{usuario.aciertosExactosTotales}"/>
+                        </p:column>
+                        <p:column headerText="Ganador" style="width:110px">
+                            <h:outputText value="#{usuario.aciertosGanadorTotales}"/>
+                        </p:column>
+                        <p:column headerText="Goles equipo" style="width:130px">
+                            <h:outputText value="#{usuario.aciertosGolesEquipoTotales}"/>
+                        </p:column>
+                        <p:column headerText="Partidos" style="width:110px">
+                            <h:outputText value="#{usuario.partidosEvaluadosTotales}"/>
+                        </p:column>
+                        <p:column headerText="Puntos/partido" style="width:130px">
+                            <h:outputText value="#{usuario.puntosPorPartido}">
+                                <f:convertNumber pattern="0.00"/>
+                            </h:outputText>
+                        </p:column>
+                        <p:column headerText="% respecto al lider" style="width:260px">
+                            <p:progressBar value="#{usuario.porcentajeRespectoLider}" displayOnly="true"/>
+                        </p:column>
+                    </p:dataTable>
+                </p:card>
+
+                <p:panel header="Segmentos del ranking">
+                    <p:panelGrid columns="2" layout="tabular" style="width:100%;">
+                        <p:card>
+                            <f:facet name="title">Top 5 usuarios</f:facet>
+                            <p:dataTable value="#{quinielaDashboardBean.topUsuarios}" var="usuario" emptyMessage="Sin datos">
+                                <p:column headerText="Usuario">
+                                    <h:outputText value="#{usuario.usuario}"/>
+                                </p:column>
+                                <p:column headerText="Puntos">
+                                    <h:outputText value="#{usuario.puntosTotales}"/>
+                                </p:column>
+                            </p:dataTable>
+                        </p:card>
+                        <p:card>
+                            <f:facet name="title">Ultimos 5 usuarios</f:facet>
+                            <p:dataTable value="#{quinielaDashboardBean.peoresUsuarios}" var="usuario" emptyMessage="Sin datos">
+                                <p:column headerText="Usuario">
+                                    <h:outputText value="#{usuario.usuario}"/>
+                                </p:column>
+                                <p:column headerText="Puntos">
+                                    <h:outputText value="#{usuario.puntosTotales}"/>
+                                </p:column>
+                            </p:dataTable>
+                        </p:card>
+                    </p:panelGrid>
+                </p:panel>
+
+            </p:outputPanel>
+
+            <p:outputPanel rendered="#{not quinielaDashboardBean.dataDisponible}">
+                <p:message severity="warn"
+                           summary="No hay datos para mostrar"
+                           detail="Verifica que exista C:\app-quiniela\tabla.csv y vuelve a cargar el dashboard."
+                           style="width:100%;"/>
+            </p:outputPanel>
         </h:form>
     </h:body>
 </f:view>
