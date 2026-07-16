@@ -12,23 +12,27 @@
         <h:form id="dashboardForm">
             <p:growl id="messages" showDetail="true" life="5000"/>
 
-            <p:toolbar style="margin-bottom:1rem;">
-                <p:toolbarGroup>
-                    <h:panelGroup layout="block">
-                        <h:outputText value="Dashboard de quiniela" style="font-size:1.6rem;font-weight:700;display:block;"/>
-                        <h:outputText value="Analisis de usuarios, ranking de puntos y distribucion de aciertos desde C:\app-quiniela\tabla.csv"/>
+            <p:menubar style="margin-bottom:1rem;">
+                <f:facet name="start">
+                    <h:panelGroup layout="block" style="padding-right:1rem;">
+                        <h:outputText value="Dashboard de quiniela" style="font-size:1.2rem;font-weight:700;display:block;"/>
                     </h:panelGroup>
-                </p:toolbarGroup>
-                <p:toolbarGroup align="right">
+                </f:facet>
+
+                <p:menuitem value="Indicadores" icon="pi pi-chart-line" onclick="document.getElementById('dashboardForm:indicadoresPanel').scrollIntoView({behavior:'smooth'});return false;"/>
+                <p:menuitem value="Ranking" icon="pi pi-users" onclick="document.getElementById('dashboardForm:rankingPanel').scrollIntoView({behavior:'smooth'});return false;"/>
+                <p:menuitem value="Segmentos" icon="pi pi-table" onclick="document.getElementById('dashboardForm:segmentosPanel').scrollIntoView({behavior:'smooth'});return false;"/>
+
+                <f:facet name="end">
                     <p:commandButton value="Recargar CSV"
                                      icon="pi pi-refresh"
                                      styleClass="ui-button-info"
                                      action="#{quinielaDashboardBean.reload}"
                                      update="@form"/>
-                </p:toolbarGroup>
-            </p:toolbar>
+                </f:facet>
+            </p:menubar>
 
-            <p:panel style="margin-bottom:1rem;">
+            <p:panel id="estadoPanel" toggleable="true" toggleableHeader="true" collapsed="true" style="margin-bottom:1rem;">
                 <f:facet name="header">
                     <h:panelGroup>
                         <h:outputText value="Estado de carga" style="font-weight:600;margin-right:.5rem;"/>
@@ -49,7 +53,7 @@
 
             <p:outputPanel rendered="#{quinielaDashboardBean.dataDisponible}">
 
-                <p:panel header="Indicadores clave" style="margin-bottom:1rem;">
+                <p:panel id="indicadoresPanel" header="Indicadores clave" style="margin-bottom:1rem;">
                     <p:panelGrid columns="3" layout="tabular" style="width:100%;" columnClasses="ui-grid-col-4,ui-grid-col-4,ui-grid-col-4">
                         <p:card>
                             <f:facet name="title">Usuarios analizados</f:facet>
@@ -115,7 +119,7 @@
                     </p:panelGrid>
                 </p:panel>
 
-                <p:card style="margin-bottom:1rem;">
+                <p:card id="rankingPanel" style="margin-bottom:1rem;">
                     <f:facet name="title">Ranking completo de usuarios</f:facet>
                     <p:dataTable value="#{quinielaDashboardBean.rankingUsuarios}"
                                  var="usuario"
@@ -155,7 +159,7 @@
                     </p:dataTable>
                 </p:card>
 
-                <p:panel header="Segmentos del ranking">
+                <p:panel id="segmentosPanel" header="Segmentos del ranking">
                     <p:panelGrid columns="2" layout="tabular" style="width:100%;">
                         <p:card>
                             <f:facet name="title">Top 5 usuarios</f:facet>

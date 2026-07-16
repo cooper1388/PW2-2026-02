@@ -55,26 +55,28 @@ public class QuinielaDashboardBean implements Serializable {
             dashboardData = service.load(CSV_PATH);
             rankingChartJson = buildRankingChartJson(getTopUsuarios());
             aciertosChartJson = buildAciertosChartJson(dashboardData.getAciertosPorTipo());
-            dataDisponible = true;
             estadoCarga = String.format(Locale.ROOT,
                     "CSV cargado correctamente desde %s (%d usuarios, %d registros, %d líneas omitidas).",
                     dashboardData.getSourceFile(),
                     dashboardData.getUsuariosAnalizados(),
                     dashboardData.getRegistrosCargados(),
                     dashboardData.getLineasOmitidas());
+            dataDisponible = true;
             addMessage(FacesMessage.SEVERITY_INFO, "Dashboard actualizado", estadoCarga);
         } catch (IOException ex) {
+            dataDisponible = false;
             dashboardData = null;
             rankingChartJson = emptyChartJson();
             aciertosChartJson = emptyChartJson();
-            dataDisponible = false;
+
             estadoCarga = "No se pudo leer el archivo CSV: " + ex.getMessage();
             addMessage(FacesMessage.SEVERITY_ERROR, "Archivo no encontrado", estadoCarga);
         } catch (RuntimeException ex) {
+            dataDisponible = false;
             dashboardData = null;
             rankingChartJson = emptyChartJson();
             aciertosChartJson = emptyChartJson();
-            dataDisponible = false;
+
             estadoCarga = "No se pudo procesar el CSV: " + ex.getMessage();
             addMessage(FacesMessage.SEVERITY_ERROR, "Error de procesamiento", estadoCarga);
         }
@@ -184,7 +186,7 @@ public class QuinielaDashboardBean implements Serializable {
         List<UsuarioQuinielaResumen> top = ranking.stream().limit(10).toList();
         for (int i = 0; i < top.size(); i++) {
             UsuarioQuinielaResumen usuario = top.get(i);
-            labels.add(usuario.getUsuario());
+            labels.add(usuario.getUsuario()+" : "+usuario.getPuntosTotales());
             values.add(usuario.getPuntosTotales());
             colors.add(BAR_COLORS.get(i % BAR_COLORS.size()));
         }
