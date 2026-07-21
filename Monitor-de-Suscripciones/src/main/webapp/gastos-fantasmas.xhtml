@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head><title>Gastos Fantasma</title></h:head>
+    <h:body>
+        <h:form>
+            <p:growl showDetail="true"/>
+            <p:menubar>
+                <p:menuitem value="Dashboard" outcome="dashboard.xhtml"/>
+                <p:menuitem value="Salir" action="#{sessionBean.logout}"/>
+            </p:menubar>
+
+            <p:panel header="Marcar uso hoy" style="margin-top:12px;">
+                <p:dataTable value="#{gastosFantasmaBean.suscripciones}" var="s">
+                    <p:column headerText="Servicio"><h:outputText value="#{s.servicio}"/></p:column>
+                    <p:column headerText="Acciones">
+                        <p:commandButton value="Use hoy" actionListener="#{gastosFantasmaBean.marcarUso(s, true)}" update="@form" styleClass="rounded-button ui-button-success"/>
+                        <p:spacer width="6"/>
+                        <p:commandButton value="No use hoy" actionListener="#{gastosFantasmaBean.marcarUso(s, false)}" update="@form" styleClass="rounded-button ui-button-danger"/>
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+
+            <p:panel header="Suscripciones no usadas" style="margin-top:12px;">
+                <h:panelGrid columns="2" cellpadding="8">
+                    <h:outputText value="Periodo (dias):"/>
+                    <p:selectOneMenu value="#{gastosFantasmaBean.dias}">
+                        <f:selectItem itemLabel="7" itemValue="7"/>
+                        <f:selectItem itemLabel="14" itemValue="14"/>
+                        <f:selectItem itemLabel="30" itemValue="30"/>
+                        <f:selectItem itemLabel="90" itemValue="90"/>
+                        <p:ajax listener="#{gastosFantasmaBean.recargarNoUsadas}" update="tablaNoUsadas"/>
+                    </p:selectOneMenu>
+                </h:panelGrid>
+
+                <p:dataTable id="tablaNoUsadas" value="#{gastosFantasmaBean.noUsadas}" var="n">
+                    <p:column headerText="Servicio"><h:outputText value="#{n.servicio}"/></p:column>
+                    <p:column headerText="Categoria"><h:outputText value="#{n.categoriaNombre}"/></p:column>
+                    <p:column headerText="Recurrencia"><h:outputText value="#{n.recurrencia}"/></p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+

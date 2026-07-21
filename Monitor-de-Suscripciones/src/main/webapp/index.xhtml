@@ -5,9 +5,26 @@
       xmlns:h="jakarta.faces.html"
       xmlns:p="primefaces">
 <f:view>
-    <h:head></h:head>
+    <h:head>
+        <title>Monitor de Suscripciones - Login</title>
+    </h:head>
     <h:body>
-
+        <h:form>
+            <p:growl showDetail="true"/>
+            <p:panel header="Iniciar sesion" style="width:380px;margin:auto;margin-top:100px;">
+                <h:panelGrid columns="2" cellpadding="5">
+                    <h:outputLabel for="correo" value="Correo:"/>
+                    <p:inputText id="correo" value="#{loginBean.correo}" required="true" label="Correo"/>
+                    <h:outputLabel for="password" value="Contrasena:"/>
+                    <p:password id="password" value="#{loginBean.password}" required="true" label="Contrasena"/>
+                    <f:facet name="footer">
+                        <p:commandButton value="Entrar" action="#{loginBean.login}" update="@form"/>
+                        <p:spacer width="8"/>
+                        <p:button value="Registrarme" outcome="registro.xhtml"/>
+                    </f:facet>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
     </h:body>
 </f:view>
 </html>

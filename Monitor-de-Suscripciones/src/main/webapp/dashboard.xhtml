@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head>
+        <title>Dashboard</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="Dashboard" outcome="dashboard.xhtml"/>
+                <p:menuitem value="Suscripciones" outcome="suscripciones.xhtml"/>
+                <p:menuitem value="Reportes" outcome="reportes.xhtml"/>
+                <p:menuitem value="Gastos Fantasma" outcome="gastos-fantasmas.xhtml"/>
+                <p:menuitem value="Categorias" outcome="categorias.xhtml" rendered="#{sessionBean.admin}"/>
+                <p:menuitem value="Admin" outcome="admin-usuarios.xhtml" rendered="#{sessionBean.admin}"/>
+                <p:menuitem value="Salir" action="#{sessionBean.logout}"/>
+            </p:menubar>
+
+            <p:panel header="Resumen general" style="margin-top:12px;">
+                <h:panelGrid columns="3" cellpadding="10">
+                    <p:panel header="Gasto mensual">
+
+                        <p:badge value="$ #{dashboardBean.gastoMensual}" styleClass="mr-2" size="large" severity="warning"/>
+                    </p:panel>
+                    <p:panel header="Gasto anual">
+                        <p:badge value="$ #{dashboardBean.gastoAnual}" styleClass="mr-2" size="large" severity="success"/>
+                    </p:panel>
+                    <p:panel header="Proximos pagos (7 dias)">
+                        <p:badge value="#{dashboardBean.proximosPagos}" styleClass="mr-2" size="large" severity="info"/>
+                    </p:panel>
+                </h:panelGrid>
+            </p:panel>
+
+            <p:panel header="Suscripciones activas" style="margin-top:12px;">
+                <p:dataTable value="#{dashboardBean.suscripciones}" var="s" paginator="true" rows="10">
+                    <p:column headerText="Servicio"><h:outputText value="#{s.servicio}"/></p:column>
+                    <p:column headerText="Categoria"><h:outputText value="#{s.categoriaNombre}"/></p:column>
+                    <p:column headerText="Costo"><h:outputText value="$ #{s.costo}"/></p:column>
+                    <p:column headerText="Renovacion"><h:outputText value="#{s.fechaRenovacion}"/></p:column>
+                    <p:column headerText="Recurrencia"><h:outputText value="#{s.recurrencia}"/></p:column>
+                </p:dataTable>
+                <p:button value="Agregar suscripcion" outcome="suscripcion-agregar.xhtml" style="margin-top:10px;"/>
+            </p:panel>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+

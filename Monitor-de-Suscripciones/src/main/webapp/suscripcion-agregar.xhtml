@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head><title>Agregar Suscripcion</title></h:head>
+    <h:body>
+        <h:form>
+            <p:growl showDetail="true"/>
+            <p:panel header="Nueva suscripcion" style="max-width:700px; margin:auto; margin-top:20px;">
+                <h:panelGrid columns="2" cellpadding="8">
+                    <h:outputLabel for="servicio" value="Servicio:"/>
+                    <p:inputText id="servicio" value="#{suscripcionBean.suscripcionActual.servicio}" required="true"/>
+
+                    <h:outputLabel for="categoria" value="Categoria:"/>
+                    <p:selectOneMenu id="categoria" value="#{suscripcionBean.suscripcionActual.categoriaId}" required="true">
+                        <f:selectItem itemLabel="Seleccione..." itemValue="0"/>
+                        <f:selectItems value="#{suscripcionBean.categorias}" var="c" itemLabel="#{c.nombre}" itemValue="#{c.id}"/>
+                    </p:selectOneMenu>
+
+                    <h:outputLabel for="costo" value="Costo:"/>
+                    <p:inputNumber id="costo" value="#{suscripcionBean.suscripcionActual.costo}" decimalPlaces="2" symbol="$ "
+                                   symbolPosition="p" decimalSeparator="." thousandSeparator=","/>
+
+                    <h:outputLabel for="fecha" value="Fecha renovacion:"/>
+                    <p:datePicker id="fecha" value="#{suscripcionBean.suscripcionActual.fechaRenovacion}" pattern="yyyy-MM-dd"/>
+
+                    <h:outputLabel for="recurrencia" value="Recurrencia:"/>
+                    <p:selectOneMenu id="recurrencia" value="#{suscripcionBean.suscripcionActual.recurrencia}">
+                        <f:selectItem itemLabel="Mensual" itemValue="MENSUAL"/>
+                        <f:selectItem itemLabel="Semanal" itemValue="SEMANAL"/>
+                        <f:selectItem itemLabel="Anual" itemValue="ANUAL"/>
+                    </p:selectOneMenu>
+                </h:panelGrid>
+
+                <p:commandButton value="Guardar" actionListener="#{suscripcionBean.guardar}" update="@form"/>
+                <p:spacer width="6"/>
+                <p:button value="Volver" outcome="suscripciones.xhtml"/>
+            </p:panel>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+

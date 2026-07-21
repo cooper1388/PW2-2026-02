@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head><title>Listado de Suscripciones</title></h:head>
+    <h:body>
+        <h:form>
+            <p:growl showDetail="true"/>
+            <p:menubar>
+                <p:menuitem value="Dashboard" outcome="dashboard.xhtml"/>
+                <p:menuitem value="Agregar" outcome="suscripcion-agregar.xhtml"/>
+                <p:menuitem value="Salir" action="#{sessionBean.logout}"/>
+            </p:menubar>
+
+            <p:dataTable value="#{suscripcionBean.suscripciones}" var="s" paginator="true" rows="10" style="margin-top:12px;">
+                <p:column headerText="Servicio"><h:outputText value="#{s.servicio}"/></p:column>
+                <p:column headerText="Categoria"><h:outputText value="#{s.categoriaNombre}"/></p:column>
+                <p:column headerText="Costo"><h:outputText value="$ #{s.costo}"/></p:column>
+                <p:column headerText="Renovacion"><h:outputText value="#{s.fechaRenovacion}"/></p:column>
+                <p:column headerText="Recurrencia"><h:outputText value="#{s.recurrencia}"/></p:column>
+                <p:column headerText="Acciones">
+                    <p:commandButton action="suscripcion-editar.xhtml?faces-redirect=true" actionListener="#{suscripcionBean.editar(s)}" update="@form" icon="pi pi-check" styleClass="rounded-button ui-button-success"/>
+                    <p:spacer width="6"/>
+                    <p:commandButton actionListener="#{suscripcionBean.eliminar(s)}" update="@form" icon="pi pi-trash" styleClass="rounded-button ui-button-danger"/>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+

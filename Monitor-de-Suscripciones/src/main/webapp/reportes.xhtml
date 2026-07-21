@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head><title>Reportes</title></h:head>
+    <h:body>
+        <h:form>
+            <p:menubar>
+                <p:menuitem value="Dashboard" outcome="dashboard.xhtml"/>
+                <p:menuitem value="Suscripciones" outcome="suscripciones.xhtml"/>
+                <p:menuitem value="Salir" action="#{sessionBean.logout}"/>
+            </p:menubar>
+
+            <p:panel header="Exportacion de reportes" style="margin-top:12px;">
+                <p:commandButton value="Exportar PDF" actionListener="#{reportesBean.exportarPdf}" ajax="false"/>
+                <p:spacer width="8"/>
+                <p:commandButton value="Exportar Excel" actionListener="#{reportesBean.exportarExcel}" ajax="false"/>
+            </p:panel>
+
+            <p:panel header="Datos actuales" style="margin-top:12px;">
+                <p:dataTable value="#{reportesBean.suscripciones}" var="s">
+                    <p:column headerText="Servicio"><h:outputText value="#{s.servicio}"/></p:column>
+                    <p:column headerText="Categoria"><h:outputText value="#{s.categoriaNombre}"/></p:column>
+                    <p:column headerText="Costo"><h:outputText value="$ #{s.costo}"/></p:column>
+                    <p:column headerText="Renovacion"><h:outputText value="#{s.fechaRenovacion}"/></p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+

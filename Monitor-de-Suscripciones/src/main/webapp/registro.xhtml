@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="jakarta.faces.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+<f:view>
+    <h:head>
+        <title>Registro de Usuario</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl showDetail="true"/>
+            <p:panel header="Registro" style="width:420px;margin:auto;margin-top:80px;">
+                <h:panelGrid columns="2" cellpadding="6">
+                    <h:outputLabel for="nombre" value="Nombre:"/>
+                    <p:inputText id="nombre" value="#{registroBean.nombre}" required="true"/>
+
+                    <h:outputLabel for="correo" value="Correo:"/>
+                    <p:inputText id="correo" value="#{registroBean.correo}" required="true"/>
+
+                    <h:outputLabel for="password" value="Contrasena:"/>
+                    <p:password id="password" value="#{registroBean.password}" required="true"/>
+
+                    <f:facet name="footer">
+                        <p:commandButton value="Crear cuenta" action="#{registroBean.registrar}" update="@form"/>
+                        <p:spacer width="8"/>
+                        <p:button value="Volver" outcome="index.xhtml"/>
+                    </f:facet>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
+
